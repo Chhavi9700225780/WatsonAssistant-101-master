@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Watson Assistant – Phone Advisor</title>
+  <meta name="description" content="Watson Assistant Phone Advisor – chatbot demo by Chhavi" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Social / theme meta -->
+  <meta name="theme-color" content="#0b5fff"/>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="#">
+          <div class="logo">WA</div>
+          <div class="brand-text">
+            <div class="title">Watson Assistant 101</div>
+            <div class="subtitle">Phone Advisor — Chhavi</div>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#how">How to use</a>
+          <a href="#demo" class="cta-link">Open Chat</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-grid">
+          <div class="hero-content">
+            <h1>AI Phone Advisor</h1>
+            <p class="lead">A conversational chatbot built with <strong>IBM Watson Assistant</strong> to help users pick the right mobile phone — fast and simple.</p>
+
+            <ul class="quick-features">
+              <li>Intent & entity based understanding</li>
+              <li>Dialog flows for personalized recommendations</li>
+              <li>Iterative testing & retraining</li>
+            </ul>
+
+            <div class="hero-actions">
+              <a class="btn primary" id="open-chat-btn">Launch Chat</a>
+              <a class="btn outline" href="https://github.com/Chhavi9700225780/CHHAVI_WatsonAssistant-IBM-INTERNSHIP" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+
+            <p class="meta small">Name: <strong>Chhavi</strong> • Email: <a href="mailto:c9081741@gmail.com">c9081741@gmail.com</a></p>
+          </div>
+
+          <div class="hero-card" aria-hidden="true">
+            <div class="device-mock">
+              <div class="screen">
+                <img src="./Images/35-try-it.jpg" alt="chat demo screenshot" />
+              </div>
+              <div class="device-foot">Try the chat widget (bottom-right)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info wrap" id="about">
+        <div class="card-grid">
+          <article class="card">
+            <h3>Project Objective</h3>
+            <p>Build an intelligent assistant that recommends phones by understanding user preferences and mapping them to brand/features.</p>
+          </article>
+
+          <article class="card">
+            <h3>Tools</h3>
+            <p>IBM Cloud, Watson Assistant, intents & entities, dialog tree, GitHub Pages for deployment.</p>
+          </article>
+
+          <article class="card">
+            <h3>Deliverables</h3>
+            <p>Working chatbot prototype, exported skill JSON, documentation, and presentation slides.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how wrap" id="how">
+        <div class="section-head">
+          <h2>How to use</h2>
+          <p class="small muted">Open the chat widget (bottom-right) and tell the bot about what you like / dislike in your phone.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step">
+            <div class="num">1</div>
+            <h4>Greet the bot</h4>
+            <p>Start with "hi" or "hello" — the assistant recognizes greetings and begins the flow.</p>
+          </div>
+
+          <div class="step">
+            <div class="num">2</div>
+            <h4>Mention brand or attribute</h4>
+            <p>Try: "I like Apple", "My Galaxy battery is bad", or "Recommend a phone".</p>
+          </div>
+
+          <div class="step">
+            <div class="num">3</div>
+            <h4>Get recommendations</h4>
+            <p>The assistant maps your preferences to suitable phone suggestions and follow-up questions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="result wrap" id="demo">
+        <div class="result-inner">
+          <h2>Testing & Results</h2>
+          <p class="muted">Continuous testing improved intent recognition and entity extraction; dialog responses were refined for relevance.</p>
+
+          <div class="kpis">
+            <div class="kpi">
+              <div class="kpi-num">~85%</div>
+              <div class="kpi-label">Intent accuracy</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">Improved</div>
+              <div class="kpi-label">Entity detection (iterative)</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">Exported</div>
+              <div class="kpi-label">Skill JSON + docs</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <strong>Watson Assistant Phone Advisor</strong>
+          <div class="small muted">Built by Chhavi • <a href="mailto:c9081741@gmail.com">c9081741@gmail.com</a></div>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/Chhavi9700225780/CHHAVI_WatsonAssistant-IBM-INTERNSHIP" target="_blank" rel="noopener">GitHub Repo</a>
+          <a href="#how">How to use</a>
+          <a href="#demo" id="open-chat-link">Open Chat</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== Watson Assistant embed script (kept exactly as provided) ===== -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "6d10c555-ca55-4665-ae13-6f678ef7b427", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "68f84f3c-155a-4559-8a83-831418e061e8", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  <!-- ===== end embed ===== -->
+
+  <!-- Small UI script: open chat button (tries to call global Watson instance when available) -->
+  <script>
+    function tryOpenChat(){
+      // if IBM Watson global instance exists, call open method if supported
+      try {
+        const w = window.watsonAssistantChatOptions;
+        // Many IBM Watson embeds create "window.watsonAssistantChat" with helper methods.
+        if(window.watsonAssistantChat) {
+          if(typeof window.watsonAssistantChat.open === 'function') {
+            window.watsonAssistantChat.open();
+            return;
+          }
+          // Some embeds expose "render" or "toggle" - attempt to open if possible.
+        }
+        // fallback: scroll to bottom where chat appears (helpful)
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      } catch(e){
+        console.debug('Chat open attempt failed', e);
+      }
+    }
+
+    document.getElementById('open-chat-btn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      tryOpenChat();
+    });
+    document.getElementById('open-chat-link').addEventListener('click', (e)=>{
+      e.preventDefault();
+      tryOpenChat();
+    });
+    document.getElementById('open-chat-btn').addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter') tryOpenChat();
+    });
+  </script>
+</body>
+</html>
