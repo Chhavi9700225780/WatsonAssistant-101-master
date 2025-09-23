@@ -1,0 +1,103 @@
+/* styles.css - elegant, modern look for Watson Assistant demo */
+:root{
+  --bg: linear-gradient(180deg,#f7fbff 0%, #eef6ff 100%);
+  --card: #ffffff;
+  --accent: #0b5fff;
+  --muted: #6b7280;
+  --glass: rgba(255,255,255,0.75);
+  --shadow: 0 8px 24px rgba(11,95,255,0.06);
+  --radius: 14px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* layout helpers */
+.wrap{max-width:1100px;margin:0 auto;padding:28px}
+.page-wrap{display:flex;flex-direction:column;min-height:100vh}
+
+/* topbar */
+.topbar{backdrop-filter: blur(6px);background:transparent;padding:14px 0;position:sticky;top:0;z-index:20}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo{
+  width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:white;background:linear-gradient(135deg,var(--accent),#3aa0ff);
+  box-shadow: 0 6px 18px rgba(11,95,255,0.12);
+}
+.brand-text .title{font-weight:700}
+.brand-text .subtitle{font-size:12px;color:var(--muted)}
+
+/* nav */
+.nav{display:flex;gap:14px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover{background:rgba(11,95,255,0.06);color:var(--accent)}
+.cta-link{background:linear-gradient(90deg,var(--accent),#2b8cff);color:white;padding:8px 12px}
+
+/* hero */
+.hero{padding:48px 0;background:transparent}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.hero-content h1{font-size:36px;margin:0 0 10px;color:#082066}
+.lead{font-size:16px;color:var(--muted);margin-bottom:18px}
+.quick-features{display:flex;gap:10px;list-style:none;padding:0;margin:0 0 18px}
+.quick-features li{background:rgba(11,95,255,0.06);padding:8px 12px;border-radius:999px;font-size:13px;color:#0447c9}
+
+/* buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#2b8cff);color:white;box-shadow:0 8px 20px rgba(11,95,255,0.12)}
+.btn.outline{border:1px solid rgba(11,95,255,0.12);color:var(--accent);background:transparent}
+
+/* hero card / mock phone */
+.hero-card{display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));border-radius:16px;box-shadow:var(--shadow)}
+.device-mock{width:320px;border-radius:16px;padding:18px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 10px 30px rgba(12,40,80,0.06);display:flex;flex-direction:column;align-items:center}
+.device-mock .screen{width:100%;height:220px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f4f9ff,#eef6ff)}
+.device-mock .screen img{width:100%;height:100%;object-fit:cover}
+.device-foot{margin-top:12px;font-size:13px;color:var(--muted)}
+
+/* info cards */
+.info .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px}
+
+/* steps */
+.how .section-head{margin-bottom:12px}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:linear-gradient(180deg,#fff,#fafcff);padding:16px;border-radius:12px;border:1px solid rgba(11,95,255,0.04)}
+.step .num{width:40px;height:40px;border-radius:10px;background:rgba(11,95,255,0.08);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);margin-bottom:10px}
+
+/* results */
+.result .result-inner{padding:18px}
+.kpis{display:flex;gap:16px;margin-top:12px}
+.kpi{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:10px;flex:1;text-align:center;border:1px solid rgba(11,95,255,0.04)}
+.kpi-num{font-size:18px;font-weight:800;color:#082066}
+.kpi-label{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* footer */
+.site-footer{margin-top:auto;padding:22px 0;background:transparent}
+.footer-grid{display:flex;justify-content:space-between;align-items:center}
+.footer-links{display:flex;gap:12px}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:18px}
+  .info .card-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;gap:12px}
+  .nav{display:none}
+}
+
+/* aesthetic micro-interactions */
+a.btn{transition:all .18s ease}
+.card, .step, .kpi, .device-mock{transition:transform .18s ease, box-shadow .18s ease}
+.card:hover, .step:hover, .kpi:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,95,255,0.06)}
